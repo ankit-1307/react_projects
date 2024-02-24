@@ -9,7 +9,7 @@ const About = () => {
                         Dive into Italy's Flavors, We're passionate locals
                         guiding you on intimate food tours. We will create
                         unforgettable memories filled with laughter, delicious
-                        discoveries, & cultural insights.
+                        discoveries, & cultural insights..
                     </h4>
                     <h5>
                         We have Guides with deep regional knowledge & personal
