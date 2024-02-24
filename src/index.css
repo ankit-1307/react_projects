@@ -1,0 +1,397 @@
+:root {
+    /* navigation section  */
+    --nav-font-1: "Montserrat", sans-serif;
+    --nav-font-weight-1: 500;
+    --nav-font-size-1: 1.2rem;
+    --nav-font-size-2: 1.3rem;
+    --nav-primary-text-1: rgb(20, 71, 51);
+    --nav-primary-text-2: #fff;
+    --nav-primary-text-3: #f5f5f5;
+    --nav-primary-text-hover-1: #c49959;
+    /* hero section */
+    --hero-font-size-1: 1.2rem;
+    --hero-letter-spacing-1: 0.1rem;
+    --hero-font-weight-1: 200;
+    --hero-primary-grey-1: #f0f0f0;
+    --hero-primary-grey-2: #f7f7f7;
+    /* about section */
+    --about-font-size-1: 1.6rem;
+    --about-font-size-2: 1rem;
+    --about-font-weight-1: 550;
+    --about-font-weight-2: 450;
+    --about-font-family-1: "Work Sans", sans-serif;
+    --about-letter-spacing-1: 1px;
+    --about-font-type-1: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+/* navigation section  */
+.navbar {
+    font-size: var(--nav-font-size-1);
+    font-family: var(--nav-font-1);
+    font-optical-sizing: auto;
+    font-weight: var(--nav-font-weight-1);
+}
+.nav-main {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-transform: capitalize;
+    padding: 1.5rem 0rem 0.5rem;
+    align-items: center;
+}
+.main-logo {
+    display: flex;
+    align-items: center;
+    height: 3.3rem;
+    justify-content: center;
+    max-height: 3.3rem;
+}
+.src-logo,
+.menu-logo-collapse {
+    max-height: 1.3rem;
+    max-width: 1.3rem;
+    height: 1.3rem;
+}
+.nav-center {
+    display: flex;
+    gap: 2.3rem;
+    align-items: center;
+    justify-content: center;
+}
+.nav-end {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+li > a {
+    color: var(--nav-primary-text-1);
+    text-decoration: none;
+}
+li > a:hover {
+    color: var(--nav-primary-text-hover-1);
+}
+li > a:focus {
+    color: var(--nav-primary-text-hover-1);
+}
+.login-btn {
+    height: 2.9rem;
+    width: 6rem;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    font-size: var(--nav-font-size-2);
+    cursor: pointer;
+    background-color: var(--nav-primary-text-2);
+    color: var(--nav-primary-text-1);
+}
+.login-btn:hover {
+    background-color: var(--nav-primary-text-3);
+    color: var(--nav-primary-text-hover-1);
+}
+.nav-end-collapse {
+    display: none;
+}
+
+/* hero section */
+.hero-main-container {
+    position: relative;
+    /* left: 5rem; */
+    height: 88vh;
+    width: 100vw;
+    background: linear-gradient(
+            180deg,
+            rgba(66, 79, 81, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("./images/hero.jpg") center/cover no-repeat;
+}
+.hero-main-container > p {
+    position: absolute;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.4rem;
+    color: var(--nav-primary-text-2);
+    top: 5rem;
+    left: 7rem;
+}
+.heroSrc {
+    height: 8vh;
+    width: 35vw;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    top: 35vh;
+    left: 5vw;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    align-items: center;
+}
+.heroSrc:active,
+.hero-src-input:focus {
+    background-color: #fff;
+}
+
+.hero-src-input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: var(--hero-font-size-1);
+    letter-spacing: var(--hero-letter-spacing-1);
+    padding-right: 2rem;
+    border-radius: 15;
+}
+
+.heroSrc > .src-icon {
+    height: 3vh;
+    width: 3vw;
+    cursor: pointer;
+}
+/* about us section */
+.about-us {
+    margin-top: 5rem;
+}
+.about-container {
+    /* border: 1px solid red; */
+    height: 55vh;
+    width: 100vw;
+    display: flex;
+    gap: 3rem;
+    background-color: #f5f5f5;
+    color: #012d21;
+    /* justify-content: center; */
+    /* padding-top: 1rem; */
+}
+.about-content > h4,
+h5 {
+    padding-top: 3rem;
+    font-size: var(--about-font-size-1);
+    font-weight: var(--about-font-weight-1);
+    padding-left: 6rem;
+    font-family: var(--about-font-family-1);
+    letter-spacing: var(--about-letter-spacing-1);
+    font-style: var(--about-font-type-1);
+}
+.about-content > h5 {
+    padding-top: 0.5rem;
+}
+.about-img {
+    background: url("./images/bologna-area.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    aspect-ratio: 4/3;
+    margin-right: 6rem;
+    border-radius: 0.1rem;
+}
+/* Regions section */
+.regions-container {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100vw;
+    margin-top: 5rem;
+    padding: 0rem 5rem;
+    gap: 1.2rem;
+}
+.region-img {
+    height: auto;
+    width: 100%;
+    filter: grayscale(0.1);
+    cursor: pointer;
+}
+.region-details {
+    position: relative;
+}
+.rating {
+    position: absolute;
+    color: goldenrod;
+    /* border: 1px solid blue; */
+    top: 1rem;
+    left: 2rem;
+    font-size: 2.2rem;
+}
+.overlay {
+    /* height: 10vh; */
+    /* width: 50vw; */
+}
+.region-overlay {
+    position: absolute;
+    /* border: 1px solid red; */
+    bottom: 2%;
+    left: 0;
+    height: 25%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 0.5rem 0rem;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: height 0.5s ease-in-out;
+    overflow-y: hidden;
+}
+.region-description {
+    /* display: none; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    padding: 0 1rem;
+}
+.region-overlay:hover {
+    height: 60%;
+    /* transition-delay: 1s; */
+    margin-bottom: 0.2rem;
+    display: block;
+}
+.pin-img {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-left: 1rem;
+}
+.region-details h3 {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+    font-weight: 450;
+    color: #c49959;
+    padding-bottom: 0.1rem;
+}
+.region-location {
+    font-size: 1.2rem;
+}
+.location-container {
+    margin: 0.5rem 0 0rem 0;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: safe;
+    gap: 1rem;
+}
+@media screen and (max-width: 1140px) {
+    .nav-end {
+        display: none;
+    }
+    .nav-end-collapse {
+        display: block;
+    }
+}
+@media screen and (max-width: 960px) {
+    .nav-featured {
+        display: none;
+    }
+}
+@media screen and (max-width: 864px) {
+    .nav-testimonial {
+        display: none;
+    }
+}
+@media screen and (max-width: 760px) {
+    .nav-main {
+        justify-content: center;
+        gap: 5rem;
+    }
+    .nav-center,
+    .hero-img {
+        display: none;
+    }
+    .heroSrc {
+        width: 92vw;
+        height: 5vh;
+        background-color: white;
+        display: flex;
+        position: absolute;
+        top: 0vh;
+        left: 0vw;
+        margin: 0px 0px;
+        border-radius: 3px;
+        align-items: center;
+        margin-right: 0vw;
+        /* border: 1px solid red; */
+        /* padding: 0.5rem 1rem; */
+        gap: 3vw;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+    .heroSrc > .src-icon {
+        height: 3vh;
+        width: 3vw;
+        cursor: pointer;
+    }
+
+    .hero-main-container {
+        /* left: 5rem; */
+        width: 100vw;
+        height: 100vh;
+        /* object-fit: cover; */
+        padding: 0;
+        margin: 0;
+        background: linear-gradient(
+                180deg,
+                rgba(66, 79, 81, 0.5),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url("./images/hero_mob.jpg") center/fill stretch;
+    }
+
+    .hero-src-input {
+        width: 90%;
+        height: 100%;
+        outline: none;
+        border: none;
+        font-size: var(--hero-font-size-1);
+        letter-spacing: var(--hero-letter-spacing-1);
+        padding-right: 2rem;
+    }
+    .hero-main-container > p {
+        font-size: 3rem;
+        color: var(--nav-primary-text-2);
+        top: 6rem;
+        left: 1rem;
+    }
+    /* media about section */
+    .about-container {
+        /* border: 1px solid red; */
+        max-height: 85vh;
+        height: 85vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background-color: #f5f5f5;
+        color: #012d21;
+        gap: rem;
+        padding-top: 0rem;
+        justify-content: flex-start;
+        position: relative;
+        flex-wrap: nowrap;
+    }
+    .about-content {
+        padding: 0 0.5rem;
+        position: absolute;
+        top: 33%;
+        overflow: hidden;
+    }
+    .about-img {
+        background: url("./images/bologna-area.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        max-height: 30%;
+        /* aspect-ratio: 4/3; */
+    }
+    .about-content > h4,
+    h5 {
+        padding: 0;
+        font-size: var(--about-font-size-2);
+        font-weight: var(--about-font-weight-2);
+    }
+}
